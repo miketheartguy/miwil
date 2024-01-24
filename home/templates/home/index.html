@@ -1,0 +1,55 @@
+{% extends "home/base.html" %}
+
+{% block additional_style %}
+    <style>
+        .portfolio-pic {
+            width: 100%;
+            max-width: 200px;
+        }
+    </style>
+{% endblock %}
+
+{% load static %}
+{% load martortags %}
+
+{% block content %}
+    <div class="container p-3 bg-light my-5 rounded-3">
+        <div class="row">
+            <div class="col-sm p-3 rounded-3">
+                <div class="container text-center">
+                    <img class="rounded-circle portfolio-pic"
+                         src="{% static 'home/img/portfolio_pic.webp' %}">
+                    <h3 class="text-center">Michael D. Wilson</h3>
+                </div>
+                <div class="container p-5">
+                    <p>This is my personal site for all the things I do...professional interests and personal
+                        hobbies:</p>
+                    <ul class="text-start mx-auto">
+                        <li>Pen & Ink Artist</li>
+                        <li>Healthcare IT Professional</li>
+                        <li>Martial arts</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-8 mx-auto">
+                {% for link in links %}
+                    <div class="card text-center my-4 mx-auto">
+                        {% if link.banner %}
+                            <img src="{{ link.banner.url }}" class="card-img-top" alt="...">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{{ link.url }}" target="_blank"><i
+                                    class="{{ link.icon }} mx-2"></i>{{ link.title }}</a></h5>
+                            {% if link.description %}
+                                <p class="card-text">
+                                    {{ link.description|safe_markdown }}
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

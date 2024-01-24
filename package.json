@@ -1,0 +1,26 @@
+{
+  "name": "miwil",
+  "version": "1.0.0",
+  "description": "MiWil.com - Art portfolio and personal site for Michael Wilson",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "js": "cp node_modules/bootstrap/dist/js/bootstrap.min.js home/static/home/js/bootstrap.min.js",
+    "css-compile": "sass assets/sass/miwil.scss home/static/home/css/miwil.css",
+    "build": "npm run js; npm run css-compile;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miketheartguy/miwil.git"
+  },
+  "author": "Michael D. Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miketheartguy/miwil/issues"
+  },
+  "homepage": "https://github.com/miketheartguy/miwil#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "sass": "^1.69.5"
+  }
+}

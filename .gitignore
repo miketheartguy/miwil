@@ -1,0 +1,12 @@
+.venv/
+docker/.volume/
+node_modules/
+__pycache__/
+.idea/
+
+home/static/home/css/miwil.css
+home/static/home/css/miwil.css.map
+home/static/home/js/bootstrap.min.js
+
+.env
+.ruff_cache/

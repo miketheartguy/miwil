@@ -1,0 +1,13 @@
+fly.toml
+.git/
+*.sqlite3
+
+docker/
+assets/
+
+.env
+.git*
+*.sh
+*.env
+
+home/static
