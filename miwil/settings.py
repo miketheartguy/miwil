@@ -35,14 +35,14 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("MIWIL_PROD") is None
-
 if os.environ.get("FLY_APP_NAME") is not None:
     app_name = os.environ.get("FLY_APP_NAME", "miwil")
     ALLOWED_HOSTS = [f"{app_name}.fly.dev", "miwil.com"]
     CSRF_TRUSTED_ORIGINS = [f"https://{app_name}.fly.dev", "https://miwil.com"]
+    DEBUG = False
 else:
-    ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+    ALLOWED_HOSTS = ["127.0.0.1", "localhost", "0.0.0.0"]
+    DEBUG = True
 
 # Application definition
 
