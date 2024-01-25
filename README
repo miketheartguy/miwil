@@ -1,5 +1,6 @@
-https://github.com/agusmakmun/django-markdown-editor
-https://github.com/jschneier/django-storages
+[MiWil.com](https://miwil.com)
+------------------------------
 
-fly ssh console
-python manage.py createsuperuser
+My personal site and art portfolio.
+
+A [Django](https://www.djangoproject.com/) application deployed to [Fly.io](https://fly.io/).
